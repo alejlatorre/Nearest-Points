@@ -40,18 +40,18 @@ gdf_prt = gpd.GeoDataFrame(
 total_stores = len(gdf_prt.vendor_id.unique())
 
 for i, r in gdf_aqp.iterrows():
-    exp_zone = r[0]
+    expansion_zone = r[0]
     zone_centroid = r[1].centroid
 
-    gdf_prt[f'dist_to_{exp_zone}'] = gdf_prt['geometry'].distance(zone_centroid)*100 # in KM
-    mask = gdf_prt[f'dist_to_{exp_zone}'] <= THRESHOLD
-    gdf_prt.loc[mask, f'near_to_{exp_zone}'] = 1
-    gdf_prt[f'near_to_{exp_zone}'].fillna(0, inplace=True) 
+    gdf_prt[f'dist_to_{expansion_zone}'] = gdf_prt['geometry'].distance(zone_centroid)*100 # in KM
+    mask = gdf_prt[f'dist_to_{expansion_zone}'] <= THRESHOLD
+    gdf_prt.loc[mask, f'near_to_{expansion_zone}'] = 1
+    gdf_prt[f'near_to_{expansion_zone}'].fillna(0, inplace=True) 
 
-    qty_stores = gdf_prt[f'near_to_{exp_zone}'].sum()
-    print(f'There are {qty_stores} stores ({round(qty_stores/total_stores*100, 2)}%) near to "{exp_zone}"')
+    nearest_stores = gdf_prt[f'near_to_{expansion_zone}'].sum()
+    print(f'There are {nearest_stores} stores ({round(nearest_stores/total_stores*100, 2)}%) near to "{expansion_zone}"')
 
-# TODO: Plot
+#TODO: Plot
 
 # %% 5. Export
 filename = 'arequipa_results.xlsx'
