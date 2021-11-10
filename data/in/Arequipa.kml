@@ -63,41 +63,26 @@
     <Placemark>
       <name>ZS</name>
       <styleUrl>#poly-000000-1200-77-nodesc</styleUrl>
-      <MultiGeometry>
-        <Polygon>
-          <outerBoundaryIs>
-            <LinearRing>
-              <tessellate>1</tessellate>
-              <coordinates>
-                -71.5649946,-16.434612,0
-                -71.567184,-16.433939,0
-                -71.5650476,-16.4349362,0
-                -71.5649946,-16.434612,0
-              </coordinates>
-            </LinearRing>
-          </outerBoundaryIs>
-        </Polygon>
-        <Polygon>
-          <outerBoundaryIs>
-            <LinearRing>
-              <tessellate>1</tessellate>
-              <coordinates>
-                -71.5650476,-16.4349362,0
-                -71.5677412,-16.4514053,0
-                -71.5553816,-16.4635878,0
-                -71.5258558,-16.4540395,0
-                -71.524139,-16.442619,0
-                -71.539291,-16.446039,0
-                -71.537361,-16.43786,0
-                -71.539841,-16.43401,0
-                -71.5476,-16.427929,0
-                -71.562126,-16.4363,0
-                -71.5650476,-16.4349362,0
-              </coordinates>
-            </LinearRing>
-          </outerBoundaryIs>
-        </Polygon>
-      </MultiGeometry>
+      <Polygon>
+        <outerBoundaryIs>
+          <LinearRing>
+            <tessellate>1</tessellate>
+            <coordinates>
+              -71.5650476,-16.4349362,0
+              -71.5677412,-16.4514053,0
+              -71.5553816,-16.4635878,0
+              -71.5258558,-16.4540395,0
+              -71.524139,-16.442619,0
+              -71.539291,-16.446039,0
+              -71.537361,-16.43786,0
+              -71.539841,-16.43401,0
+              -71.5476,-16.427929,0
+              -71.562126,-16.4363,0
+              -71.5650476,-16.4349362,0
+            </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
     </Placemark>
     <Placemark>
       <name>ZSO</name>
