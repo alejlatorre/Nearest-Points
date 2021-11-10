@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import geopandas as gpd
 from shapely import wkt
+from source import utils as ut
 
 # %% 1. General settings
 option_settings = {
@@ -36,25 +37,21 @@ gdf_prt = gpd.GeoDataFrame(
     geometry=gpd.points_from_xy(df_prt.longitude, df_prt.latitude)
 )
 
-# %% 4. Algorithm
-total_stores = len(gdf_prt.vendor_id.unique())
+# %% 4. Algorithm 
+results = ut.nearest_supply(gdf_prt, gdf_aqp, 'vendor_id', THRESHOLD)
 
-for i, r in gdf_aqp.iterrows():
-    expansion_zone = r[0]
-    zone_centroid = r[1].centroid
-
-    gdf_prt[f'dist_to_{expansion_zone}'] = gdf_prt['geometry'].distance(zone_centroid)*100 # in KM
-    mask = gdf_prt[f'dist_to_{expansion_zone}'] <= THRESHOLD
-    gdf_prt.loc[mask, f'near_to_{expansion_zone}'] = 1
-    gdf_prt[f'near_to_{expansion_zone}'].fillna(0, inplace=True) 
-
-    nearest_stores = gdf_prt[f'near_to_{expansion_zone}'].sum()
-    print(f'There are {nearest_stores} stores ({round(nearest_stores/total_stores*100, 2)}%) near to "{expansion_zone}"')
-
-#TODO: Plot
+# %% 5. Vertical outputs
+verticals = gdf_prt.vertical.unique()
+vert_results = {}
+for i, v in enumerate(verticals):
+    print(v)
+    vert_results[v] = ut.nearest_supply(gdf_prt[gdf_prt.vertical == v], gdf_aqp, 'vendor_id', THRESHOLD)
+    print('---------------------------------------')
 
 # %% 5. Export
 filename = 'arequipa_results.xlsx'
-gdf_prt.to_excel(OUT_PATH + filename)
+results.to_excel(OUT_PATH + filename)
 
-# %%
+# %% 6. Decision
+# Expandir todas menos Z_N, en esta zona es recomendable primero huntear.
+# Hay porque hay muy poca oferta
