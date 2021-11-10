@@ -36,7 +36,7 @@ gdf_prt = gpd.GeoDataFrame(
     geometry=gpd.points_from_xy(df_prt.longitude, df_prt.latitude)
 )
 
-# %% 3. Algorithm
+# %% 4. Algorithm
 total_stores = len(gdf_prt.vendor_id.unique())
 
 for i, r in gdf_aqp.iterrows():
@@ -53,8 +53,8 @@ for i, r in gdf_aqp.iterrows():
 
 # TODO: Plot
 
-# %% 4. Export
-filename = 'AQP_exp.csv'
-gdf_prt.to_csv(OUT_PATH + filename, sep=';')
+# %% 5. Export
+filename = 'arequipa_results.xlsx'
+gdf_prt.to_excel(OUT_PATH + filename)
 
 # %%

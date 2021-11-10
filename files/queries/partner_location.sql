@@ -3,7 +3,7 @@ with
     select 
       cit.name as city,
       safe_cast(ven2.vendor_code as int) as vendor_id,
-      trim(regexp_replace(initcap(regexp_replace(translate(vendor.vendor_name, 'áéíóúâêîôûàèìòùãñõäëïöüç'  UPPER('áéíóúâêîôûàèìòùãñõäëïöüç')  '`´', 'aeiouaeiouaeiouanoaeiouc'  UPPER('aeiouaeiouaeiouanoaeiouc')  '''), '[[punct]]', '')), 's{2,5}', ' ')) as vendor_name,
+      trim(regexp_replace(initcap(regexp_replace(translate(vendor.vendor_name, 'áéíóúâêîôûàèìòùãñõäëïöüç' || UPPER('áéíóúâêîôûàèìòùãñõäëïöüç') || '`´', 'aeiouaeiouaeiouanoaeiouc' || UPPER('aeiouaeiouaeiouanoaeiouc') || '\''), '[[:punct:]]', '')), '\\s{2,5}', ' ')) as vendor_name,
       ven2.vertical_type as vertical,
       ven2.location as location,
       row_number() over(partition by ven2.vendor_code order by ven2.vendor_code) as rn

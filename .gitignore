@@ -29,8 +29,10 @@ MANIFEST
 
 # Random stuff
 data/in/*.csv
-data/out/*.csv
+data/in/*.xlsx
 data/in/*.kml
+data/out/*.csv
+data/out/*.xlsx
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
