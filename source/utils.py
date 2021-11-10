@@ -2,6 +2,26 @@ import geopandas as gpd
 from shapely import wkt
 
 def nearest_supply(gdf, polygons, ids, threshold):
+    """
+    Compute distance between each stores and zones centroid.
+    Also, identifies if this distance is less than threshold.
+    Parameters
+    ----------
+    gdf : dataframe of shape (n_stores, n_features)
+        Data of each store.
+    polygons : dataframe of shape (n_zones, 2)
+        Data of proposed zone polygons.
+    ids : list
+        List of store IDs.
+    threshold : int
+        Limit distance that is required in evaluation.
+    Returns
+    -------
+    gdf_ : dataframe
+        Data of each store with distance between its coordinates and centroid of each proposed zone. 
+        Also, it has an identifier that is 1 if computed distance is less than threshold and 0 if it is greather.
+    """
+
     gdf_ = gdf.copy()
     total_stores = len(gdf_[ids].unique())
 
