@@ -7,8 +7,8 @@ from source import utils as ut
 
 # %% 1. General settings
 option_settings = {
-    'display.max_rows': None,
-    'display.max_columns': False,
+    'display.max_rows': False,
+    'display.max_columns': None,
     'display.float_format': '{:,.10f}'.format
 }
 [pd.set_option(option, setting) for option, setting in option_settings.items()]
@@ -18,7 +18,7 @@ gpd.io.file.fiona.drvsupport.supported_drivers['KML'] = 'rw'
 IN_PATH = 'data/in/'
 OUT_PATH = 'data/out/'
 CITY = 'Arequipa'
-THRESHOLD = 3.5
+THRESHOLD = 3
 
 # %% 2. Load data
 filename = 'Arequipa.kml'
