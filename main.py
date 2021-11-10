@@ -23,7 +23,7 @@ THRESHOLD = 3.5
 filename = 'Arequipa.kml'
 gdf_aqp = gpd.read_file(IN_PATH + filename, driver='KML')
 
-filename = 'partner_location.csv'
+filename = 'partners_location.csv'
 df_prt = pd.read_csv(IN_PATH + filename)
 
 # %% 3. Format data
