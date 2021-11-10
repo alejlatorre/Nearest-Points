@@ -18,7 +18,7 @@ gpd.io.file.fiona.drvsupport.supported_drivers['KML'] = 'rw'
 IN_PATH = 'data/in/'
 OUT_PATH = 'data/out/'
 CITY = 'Arequipa'
-THRESHOLD = 3
+THRESHOLD = 3.5
 
 # %% 2. Load data
 filename = 'Arequipa.kml'
@@ -52,6 +52,3 @@ for i, v in enumerate(verticals):
 filename = 'arequipa_results.xlsx'
 results.to_excel(OUT_PATH + filename)
 
-# %% 6. Decision
-# Expandir todas menos Z_N, en esta zona es recomendable primero huntear.
-# Hay porque hay muy poca oferta
