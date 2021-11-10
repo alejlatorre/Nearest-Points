@@ -33,6 +33,8 @@ data/in/*.xlsx
 data/in/*.kml
 data/out/*.csv
 data/out/*.xlsx
+files/*.txt
+files/queries/*.sql
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
