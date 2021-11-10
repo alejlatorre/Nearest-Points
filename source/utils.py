@@ -5,6 +5,7 @@ def nearest_supply(gdf, polygons, ids, threshold):
     gdf_ = gdf.copy()
     total_stores = len(gdf_[ids].unique())
 
+    print(f'Total: {total_stores}')
     for i, r in polygons.iterrows():
         expansion_zone = r[0]
         zone_centroid = r[1].centroid
