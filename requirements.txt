@@ -19,14 +19,10 @@ Cython==0.29.22
 debugpy==1.4.3
 decorator==5.1.0
 defusedxml==0.6.0
-# descartes @ file:///E:/Scripts/Python/Repo/Thiessen-Polygons/Thiessen-Polygons/source/wheels/descartes-1.1.0-py3-none-any.whl
 docopt==0.6.2
 entrypoints==0.3
 et-xmlfile==1.0.1
 Figures==0.4.0
-# Fiona @ file:///E:/Scripts/Python/Repo/Thiessen-Polygons/Thiessen-Polygons/source/wheels/Fiona-1.8.20-cp37-cp37m-win_amd64.whl
-# GDAL @ file:///E:/Scripts/Python/Repo/Thiessen-Polygons/Thiessen-Polygons/source/wheels/GDAL-3.3.2-cp37-cp37m-win_amd64.whl
-# geopandas @ file:///E:/Scripts/Python/Repo/Thiessen-Polygons/Thiessen-Polygons/source/wheels/geopandas-0.10.0-py2.py3-none-any.whl
 geovoronoi==0.3.0
 idna==3.2
 importlib-metadata==4.8.1
