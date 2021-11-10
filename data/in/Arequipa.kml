@@ -41,7 +41,7 @@
       </Pair>
     </StyleMap>
     <Placemark>
-      <name>ZE</name>
+      <name>Zona Oeste</name>
       <styleUrl>#poly-000000-1200-77-nodesc</styleUrl>
       <Polygon>
         <outerBoundaryIs>
@@ -61,7 +61,7 @@
       </Polygon>
     </Placemark>
     <Placemark>
-      <name>ZS</name>
+      <name>Zona Sur</name>
       <styleUrl>#poly-000000-1200-77-nodesc</styleUrl>
       <Polygon>
         <outerBoundaryIs>
@@ -85,7 +85,7 @@
       </Polygon>
     </Placemark>
     <Placemark>
-      <name>ZSO</name>
+      <name>Zona Sureste</name>
       <styleUrl>#poly-000000-1200-77-nodesc</styleUrl>
       <Polygon>
         <outerBoundaryIs>
@@ -112,7 +112,7 @@
       </Polygon>
     </Placemark>
     <Placemark>
-      <name>ZNO</name>
+      <name>Zona Noreste</name>
       <styleUrl>#poly-000000-1200-77-nodesc</styleUrl>
       <Polygon>
         <outerBoundaryIs>
@@ -140,7 +140,7 @@
       </Polygon>
     </Placemark>
     <Placemark>
-      <name>ZN</name>
+      <name>Zona Norte</name>
       <styleUrl>#poly-000000-1200-77-nodesc</styleUrl>
       <Polygon>
         <outerBoundaryIs>
