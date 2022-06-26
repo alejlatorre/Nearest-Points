@@ -50,7 +50,7 @@ munch==2.5.0
 nbconvert==5.6.1
 nbformat==5.0.6
 nest-asyncio==1.5.1
-notebook==6.0.3
+notebook==6.4.12
 numba==0.53.1
 numpy==1.21.2
 openpyxl==3.0.4
